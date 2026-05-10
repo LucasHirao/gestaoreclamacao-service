@@ -4,6 +4,7 @@ bin/
 /target/
 out/
 .idea/
+.vscode/
 *.iml
 *.ipr
 *.iws
