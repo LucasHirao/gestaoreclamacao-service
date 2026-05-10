@@ -1,0 +1,57 @@
+# Ambiente local: observabilidade + SQS compatível com LocalStack/Floci-like (endpoint SQS configurável por variável AWS_ENDPOINT_URL).
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: reclamacoes
+      POSTGRES_PASSWORD: reclamacoes
+      POSTGRES_DB: reclamacoes
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U reclamacoes"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  localstack:
+    image: localstack/localstack:3.5
+    environment:
+      SERVICES: sqs,sns,dynamodb
+      DEBUG: "0"
+    ports:
+      - "4566:4566"
+    volumes:
+      - ./scripts/localstack-init.sh:/etc/localstack/init/ready.d/init-aws.sh
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "awslocal sqs get-queue-url --queue-name integracao-reclamacoes >/dev/null 2>&1 && awslocal dynamodb describe-table --table-name bdd-fronteira-sanidade >/dev/null 2>&1 && awslocal sns list-topics >/dev/null 2>&1",
+        ]
+      interval: 5s
+      timeout: 10s
+      retries: 25
+      start_period: 25s
+
+  prometheus:
+    image: prom/prometheus:v2.53.0
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./infra/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+
+  grafana:
+    image: grafana/grafana:11.2.0
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: admin
+      GF_USERS_DEFAULT_THEME: dark
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./infra/grafana/datasources.yml:/etc/grafana/provisioning/datasources/datasources.yml:ro
+    depends_on:
+      - prometheus

@@ -1,0 +1,5 @@
+{
+  "prazoPadraoDiasCorridos": 10,
+  "diasAntesParaAlerta": 2,
+  "limiteBuscaAlertas": 100
+}

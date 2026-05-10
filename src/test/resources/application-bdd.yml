@@ -1,0 +1,38 @@
+# Perfil Spring "bdd" (Cucumber): PostgreSQL local, Flyway e AWS (SQS/SNS/DynamoDB) via LocalStack / Spring Cloud AWS.
+#
+# Para desligar infra integrada no Maven: -DskipIntegrationInfra=true
+#
+spring:
+  datasource:
+    url: jdbc:postgresql://${BDD_PG_HOST:localhost}:${BDD_PG_PORT:5432}/${BDD_PG_DB:reclamacoes}
+    username: ${BDD_PG_USER:reclamacoes}
+    password: ${BDD_PG_PASSWORD:reclamacoes}
+    driver-class-name: org.postgresql.Driver
+  flyway:
+    enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          time_zone: UTC
+  cloud:
+    aws:
+      endpoint: ${AWS_ENDPOINT_URL:http://localhost.localstack.cloud:4566}
+      credentials:
+        access-key: test
+        secret-key: test
+      sqs:
+        enabled: true
+        queue-not-found-strategy: CREATE
+      sns:
+        enabled: true
+      dynamodb:
+        enabled: true
+
+aws:
+  sqs:
+    integracao-queue: ${SQS_INTEGRACAO:http://sqs.us-east-1.localhost.localstack.cloud:4566/000000000000/integracao-reclamacoes}
+    standardized-request-queue: ''

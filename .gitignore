@@ -1,0 +1,15 @@
+build/
+.gradle/
+bin/
+/target/
+out/
+.idea/
+*.iml
+*.ipr
+*.iws
+.DS_Store
+data/
+logs/
+*.log
+jmh.out
+pit-reports/

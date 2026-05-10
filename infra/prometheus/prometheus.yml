@@ -1,0 +1,10 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: gestao-reclamacoes
+    metrics_path: /actuator/prometheus
+    static_configs:
+      - targets:
+          - host.docker.internal:8080
+    # Em Linux puro, substitua por IP da máquina ou adicione o serviço `app` ao compose.

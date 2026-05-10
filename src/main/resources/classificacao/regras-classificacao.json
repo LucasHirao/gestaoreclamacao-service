@@ -1,0 +1,1152 @@
+{
+  "regras": [
+    {
+      "categoria": "ACESSO_CONTA",
+      "termo": "login",
+      "peso": 8,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'login' (ACESSO_CONTA)"
+    },
+    {
+      "categoria": "ACESSO_CONTA",
+      "termo": "senha",
+      "peso": 8,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'senha' (ACESSO_CONTA)"
+    },
+    {
+      "categoria": "ACESSO_CONTA",
+      "termo": "não consigo entrar",
+      "peso": 10,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'não consigo entrar' (ACESSO_CONTA)"
+    },
+    {
+      "categoria": "ACESSO_CONTA",
+      "termo": "conta bloqueada",
+      "peso": 10,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'conta bloqueada' (ACESSO_CONTA)"
+    },
+    {
+      "categoria": "ACESSO_CONTA",
+      "termo": "token inválido",
+      "peso": 10,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'token inválido' (ACESSO_CONTA)"
+    },
+    {
+      "categoria": "ACESSO_CONTA",
+      "termo": "biometria",
+      "peso": 6,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'biometria' (ACESSO_CONTA)"
+    },
+    {
+      "categoria": "ACESSO_CONTA",
+      "termo": "autenticação",
+      "peso": 9,
+      "tipo": "PALAVRA",
+      "criticidade": "ALTA",
+      "justificativa": "match palavra 'autenticação' (ACESSO_CONTA)"
+    },
+    {
+      "categoria": "APLICATIVO",
+      "termo": "app",
+      "peso": 8,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'app' (APLICATIVO)"
+    },
+    {
+      "categoria": "APLICATIVO",
+      "termo": "aplicativo",
+      "peso": 10,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'aplicativo' (APLICATIVO)"
+    },
+    {
+      "categoria": "APLICATIVO",
+      "termo": "travando",
+      "peso": 10,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'travando' (APLICATIVO)"
+    },
+    {
+      "categoria": "APLICATIVO",
+      "termo": "lento",
+      "peso": 7,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'lento' (APLICATIVO)"
+    },
+    {
+      "categoria": "APLICATIVO",
+      "termo": "erro no aplicativo",
+      "peso": 10,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'erro no aplicativo' (APLICATIVO)"
+    },
+    {
+      "categoria": "APLICATIVO",
+      "termo": "não carrega",
+      "peso": 10,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'não carrega' (APLICATIVO)"
+    },
+    {
+      "categoria": "APLICATIVO",
+      "termo": "fora do ar",
+      "peso": 9,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'fora do ar' (APLICATIVO)"
+    },
+    {
+      "categoria": "APLICATIVO",
+      "termo": "bug",
+      "peso": 7,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'bug' (APLICATIVO)"
+    },
+    {
+      "categoria": "COBRANCA",
+      "termo": "cobrança",
+      "peso": 10,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'cobrança' (COBRANCA)"
+    },
+    {
+      "categoria": "COBRANCA",
+      "termo": "cobrança indevida",
+      "peso": 12,
+      "tipo": "FRASE",
+      "criticidade": "ALTA",
+      "justificativa": "match frase 'cobrança indevida' (COBRANCA)"
+    },
+    {
+      "categoria": "COBRANCA",
+      "termo": "tarifa",
+      "peso": 8,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'tarifa' (COBRANCA)"
+    },
+    {
+      "categoria": "COBRANCA",
+      "termo": "tarifa indevida",
+      "peso": 12,
+      "tipo": "FRASE",
+      "criticidade": "ALTA",
+      "justificativa": "match frase 'tarifa indevida' (COBRANCA)"
+    },
+    {
+      "categoria": "COBRANCA",
+      "termo": "juros",
+      "peso": 8,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'juros' (COBRANCA)"
+    },
+    {
+      "categoria": "COBRANCA",
+      "termo": "fatura",
+      "peso": 7,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'fatura' (COBRANCA)"
+    },
+    {
+      "categoria": "COBRANCA",
+      "termo": "estorno",
+      "peso": 8,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'estorno' (COBRANCA)"
+    },
+    {
+      "categoria": "COBRANCA",
+      "termo": "pagamento duplicado",
+      "peso": 10,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'pagamento duplicado' (COBRANCA)"
+    },
+    {
+      "categoria": "COBRANCA",
+      "termo": "cobrou duas vezes",
+      "peso": 10,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'cobrou duas vezes' (COBRANCA)"
+    },
+    {
+      "categoria": "FRAUDE",
+      "termo": "fraude",
+      "peso": 12,
+      "tipo": "PALAVRA",
+      "criticidade": "ALTA",
+      "justificativa": "match palavra 'fraude' (FRAUDE)"
+    },
+    {
+      "categoria": "FRAUDE",
+      "termo": "golpe",
+      "peso": 12,
+      "tipo": "PALAVRA",
+      "criticidade": "ALTA",
+      "justificativa": "match palavra 'golpe' (FRAUDE)"
+    },
+    {
+      "categoria": "FRAUDE",
+      "termo": "não reconheço",
+      "peso": 12,
+      "tipo": "FRASE",
+      "criticidade": "ALTA",
+      "justificativa": "match frase 'não reconheço' (FRAUDE)"
+    },
+    {
+      "categoria": "FRAUDE",
+      "termo": "compra não reconhecida",
+      "peso": 12,
+      "tipo": "FRASE",
+      "criticidade": "ALTA",
+      "justificativa": "match frase 'compra não reconhecida' (FRAUDE)"
+    },
+    {
+      "categoria": "FRAUDE",
+      "termo": "transação não autorizada",
+      "peso": 13,
+      "tipo": "FRASE",
+      "criticidade": "ALTA",
+      "justificativa": "match frase 'transação não autorizada' (FRAUDE)"
+    },
+    {
+      "categoria": "FRAUDE",
+      "termo": "pix não autorizado",
+      "peso": 13,
+      "tipo": "FRASE",
+      "criticidade": "ALTA",
+      "justificativa": "match frase 'pix não autorizado' (FRAUDE)"
+    },
+    {
+      "categoria": "FRAUDE",
+      "termo": "cartão clonado",
+      "peso": 13,
+      "tipo": "FRASE",
+      "criticidade": "ALTA",
+      "justificativa": "match frase 'cartão clonado' (FRAUDE)"
+    },
+    {
+      "categoria": "FRAUDE",
+      "termo": "conta invadida",
+      "peso": 12,
+      "tipo": "FRASE",
+      "criticidade": "ALTA",
+      "justificativa": "match frase 'conta invadida' (FRAUDE)"
+    },
+    {
+      "categoria": "FRAUDE",
+      "termo": "phishing",
+      "peso": 10,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'phishing' (FRAUDE)"
+    },
+    {
+      "categoria": "CARTAO",
+      "termo": "cartão",
+      "peso": 10,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'cartão' (CARTAO)"
+    },
+    {
+      "categoria": "CARTAO",
+      "termo": "cartão de crédito",
+      "peso": 12,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'cartão de crédito' (CARTAO)"
+    },
+    {
+      "categoria": "CARTAO",
+      "termo": "fatura",
+      "peso": 9,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'fatura' (CARTAO)"
+    },
+    {
+      "categoria": "CARTAO",
+      "termo": "limite",
+      "peso": 8,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'limite' (CARTAO)"
+    },
+    {
+      "categoria": "CARTAO",
+      "termo": "anuidade",
+      "peso": 8,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'anuidade' (CARTAO)"
+    },
+    {
+      "categoria": "CARTAO",
+      "termo": "cartão bloqueado",
+      "peso": 10,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'cartão bloqueado' (CARTAO)"
+    },
+    {
+      "categoria": "CARTAO",
+      "termo": "senha do cartão",
+      "peso": 9,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'senha do cartão' (CARTAO)"
+    },
+    {
+      "categoria": "PIX_TRANSFERENCIA",
+      "termo": "pix",
+      "peso": 12,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'pix' (PIX_TRANSFERENCIA)"
+    },
+    {
+      "categoria": "PIX_TRANSFERENCIA",
+      "termo": "chave pix",
+      "peso": 11,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'chave pix' (PIX_TRANSFERENCIA)"
+    },
+    {
+      "categoria": "PIX_TRANSFERENCIA",
+      "termo": "qr code",
+      "peso": 9,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'qr code' (PIX_TRANSFERENCIA)"
+    },
+    {
+      "categoria": "PIX_TRANSFERENCIA",
+      "termo": "transferência",
+      "peso": 8,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'transferência' (PIX_TRANSFERENCIA)"
+    },
+    {
+      "categoria": "PIX_TRANSFERENCIA",
+      "termo": "pix não caiu",
+      "peso": 11,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'pix não caiu' (PIX_TRANSFERENCIA)"
+    },
+    {
+      "categoria": "PIX_TRANSFERENCIA",
+      "termo": "pix errado",
+      "peso": 10,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'pix errado' (PIX_TRANSFERENCIA)"
+    },
+    {
+      "categoria": "PIX_TRANSFERENCIA",
+      "termo": "bloqueio cautelar",
+      "peso": 11,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'bloqueio cautelar' (PIX_TRANSFERENCIA)"
+    },
+    {
+      "categoria": "PIX_TRANSFERENCIA",
+      "termo": "mecanismo especial de devolução",
+      "peso": 12,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'mecanismo especial de devolução' (PIX_TRANSFERENCIA)"
+    },
+    {
+      "categoria": "CONTA_CORRENTE",
+      "termo": "conta corrente",
+      "peso": 10,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'conta corrente' (CONTA_CORRENTE)"
+    },
+    {
+      "categoria": "CONTA_CORRENTE",
+      "termo": "saldo",
+      "peso": 8,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'saldo' (CONTA_CORRENTE)"
+    },
+    {
+      "categoria": "CONTA_CORRENTE",
+      "termo": "extrato",
+      "peso": 8,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'extrato' (CONTA_CORRENTE)"
+    },
+    {
+      "categoria": "CONTA_CORRENTE",
+      "termo": "débito automático",
+      "peso": 9,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'débito automático' (CONTA_CORRENTE)"
+    },
+    {
+      "categoria": "CONTA_CORRENTE",
+      "termo": "conta encerrada",
+      "peso": 9,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'conta encerrada' (CONTA_CORRENTE)"
+    },
+    {
+      "categoria": "CONTA_CORRENTE",
+      "termo": "conta bloqueada",
+      "peso": 10,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'conta bloqueada' (CONTA_CORRENTE)"
+    },
+    {
+      "categoria": "CONTA_CORRENTE",
+      "termo": "cheque especial",
+      "peso": 9,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'cheque especial' (CONTA_CORRENTE)"
+    },
+    {
+      "categoria": "EMPRESTIMO_FINANCIAMENTO",
+      "termo": "empréstimo",
+      "peso": 10,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'empréstimo' (EMPRESTIMO_FINANCIAMENTO)"
+    },
+    {
+      "categoria": "EMPRESTIMO_FINANCIAMENTO",
+      "termo": "financiamento",
+      "peso": 10,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'financiamento' (EMPRESTIMO_FINANCIAMENTO)"
+    },
+    {
+      "categoria": "EMPRESTIMO_FINANCIAMENTO",
+      "termo": "parcela",
+      "peso": 8,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'parcela' (EMPRESTIMO_FINANCIAMENTO)"
+    },
+    {
+      "categoria": "EMPRESTIMO_FINANCIAMENTO",
+      "termo": "saldo devedor",
+      "peso": 9,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'saldo devedor' (EMPRESTIMO_FINANCIAMENTO)"
+    },
+    {
+      "categoria": "EMPRESTIMO_FINANCIAMENTO",
+      "termo": "amortização",
+      "peso": 8,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'amortização' (EMPRESTIMO_FINANCIAMENTO)"
+    },
+    {
+      "categoria": "EMPRESTIMO_FINANCIAMENTO",
+      "termo": "quitação",
+      "peso": 8,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'quitação' (EMPRESTIMO_FINANCIAMENTO)"
+    },
+    {
+      "categoria": "EMPRESTIMO_FINANCIAMENTO",
+      "termo": "consignado",
+      "peso": 10,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'consignado' (EMPRESTIMO_FINANCIAMENTO)"
+    },
+    {
+      "categoria": "EMPRESTIMO_FINANCIAMENTO",
+      "termo": "crédito pessoal",
+      "peso": 10,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'crédito pessoal' (EMPRESTIMO_FINANCIAMENTO)"
+    },
+    {
+      "categoria": "IMOBILIARIO",
+      "termo": "imobiliário",
+      "peso": 12,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'imobiliário' (IMOBILIARIO)"
+    },
+    {
+      "categoria": "IMOBILIARIO",
+      "termo": "crédito imobiliário",
+      "peso": 13,
+      "tipo": "FRASE",
+      "criticidade": "ALTA",
+      "justificativa": "match frase 'crédito imobiliário' (IMOBILIARIO)"
+    },
+    {
+      "categoria": "IMOBILIARIO",
+      "termo": "financiamento imobiliário",
+      "peso": 13,
+      "tipo": "FRASE",
+      "criticidade": "ALTA",
+      "justificativa": "match frase 'financiamento imobiliário' (IMOBILIARIO)"
+    },
+    {
+      "categoria": "IMOBILIARIO",
+      "termo": "imóvel",
+      "peso": 10,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'imóvel' (IMOBILIARIO)"
+    },
+    {
+      "categoria": "IMOBILIARIO",
+      "termo": "casa",
+      "peso": 6,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'casa' (IMOBILIARIO)"
+    },
+    {
+      "categoria": "IMOBILIARIO",
+      "termo": "apartamento",
+      "peso": 7,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'apartamento' (IMOBILIARIO)"
+    },
+    {
+      "categoria": "IMOBILIARIO",
+      "termo": "fgts",
+      "peso": 8,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'fgts' (IMOBILIARIO)"
+    },
+    {
+      "categoria": "IMOBILIARIO",
+      "termo": "registro do imóvel",
+      "peso": 9,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'registro do imóvel' (IMOBILIARIO)"
+    },
+    {
+      "categoria": "SEGUROS",
+      "termo": "seguro",
+      "peso": 10,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'seguro' (SEGUROS)"
+    },
+    {
+      "categoria": "SEGUROS",
+      "termo": "apólice",
+      "peso": 10,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'apólice' (SEGUROS)"
+    },
+    {
+      "categoria": "SEGUROS",
+      "termo": "sinistro",
+      "peso": 11,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'sinistro' (SEGUROS)"
+    },
+    {
+      "categoria": "SEGUROS",
+      "termo": "resgate",
+      "peso": 8,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'resgate' (SEGUROS)"
+    },
+    {
+      "categoria": "SEGUROS",
+      "termo": "capitalização",
+      "peso": 10,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'capitalização' (SEGUROS)"
+    },
+    {
+      "categoria": "SEGUROS",
+      "termo": "seguro de vida",
+      "peso": 11,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'seguro de vida' (SEGUROS)"
+    },
+    {
+      "categoria": "SEGUROS",
+      "termo": "seguro auto",
+      "peso": 10,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'seguro auto' (SEGUROS)"
+    },
+    {
+      "categoria": "SEGUROS",
+      "termo": "prestamista",
+      "peso": 10,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'prestamista' (SEGUROS)"
+    },
+    {
+      "categoria": "INVESTIMENTOS",
+      "termo": "investimento",
+      "peso": 10,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'investimento' (INVESTIMENTOS)"
+    },
+    {
+      "categoria": "INVESTIMENTOS",
+      "termo": "aplicação",
+      "peso": 9,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'aplicação' (INVESTIMENTOS)"
+    },
+    {
+      "categoria": "INVESTIMENTOS",
+      "termo": "resgate de investimento",
+      "peso": 11,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'resgate de investimento' (INVESTIMENTOS)"
+    },
+    {
+      "categoria": "INVESTIMENTOS",
+      "termo": "cdb",
+      "peso": 9,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'cdb' (INVESTIMENTOS)"
+    },
+    {
+      "categoria": "INVESTIMENTOS",
+      "termo": "renda fixa",
+      "peso": 9,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'renda fixa' (INVESTIMENTOS)"
+    },
+    {
+      "categoria": "INVESTIMENTOS",
+      "termo": "fundo",
+      "peso": 7,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'fundo' (INVESTIMENTOS)"
+    },
+    {
+      "categoria": "INVESTIMENTOS",
+      "termo": "tesouro direto",
+      "peso": 9,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'tesouro direto' (INVESTIMENTOS)"
+    },
+    {
+      "categoria": "INVESTIMENTOS",
+      "termo": "poupança",
+      "peso": 9,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'poupança' (INVESTIMENTOS)"
+    },
+    {
+      "categoria": "ATENDIMENTO",
+      "termo": "atendimento",
+      "peso": 10,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'atendimento' (ATENDIMENTO)"
+    },
+    {
+      "categoria": "ATENDIMENTO",
+      "termo": "atendente",
+      "peso": 8,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'atendente' (ATENDIMENTO)"
+    },
+    {
+      "categoria": "ATENDIMENTO",
+      "termo": "gerente",
+      "peso": 7,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'gerente' (ATENDIMENTO)"
+    },
+    {
+      "categoria": "ATENDIMENTO",
+      "termo": "agência",
+      "peso": 9,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'agência' (ATENDIMENTO)"
+    },
+    {
+      "categoria": "ATENDIMENTO",
+      "termo": "sac",
+      "peso": 8,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'sac' (ATENDIMENTO)"
+    },
+    {
+      "categoria": "ATENDIMENTO",
+      "termo": "ouvidoria",
+      "peso": 11,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'ouvidoria' (ATENDIMENTO)"
+    },
+    {
+      "categoria": "ATENDIMENTO",
+      "termo": "demora",
+      "peso": 8,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'demora' (ATENDIMENTO)"
+    },
+    {
+      "categoria": "ATENDIMENTO",
+      "termo": "sem resposta",
+      "peso": 9,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'sem resposta' (ATENDIMENTO)"
+    },
+    {
+      "categoria": "ATENDIMENTO",
+      "termo": "descaso",
+      "peso": 9,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'descaso' (ATENDIMENTO)"
+    },
+    {
+      "categoria": "DOCUMENTOS_ANEXOS",
+      "termo": "documento",
+      "peso": 8,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'documento' (DOCUMENTOS_ANEXOS)"
+    },
+    {
+      "categoria": "DOCUMENTOS_ANEXOS",
+      "termo": "anexo",
+      "peso": 8,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'anexo' (DOCUMENTOS_ANEXOS)"
+    },
+    {
+      "categoria": "DOCUMENTOS_ANEXOS",
+      "termo": "comprovante",
+      "peso": 8,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'comprovante' (DOCUMENTOS_ANEXOS)"
+    },
+    {
+      "categoria": "DOCUMENTOS_ANEXOS",
+      "termo": "digitalização",
+      "peso": 8,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'digitalização' (DOCUMENTOS_ANEXOS)"
+    },
+    {
+      "categoria": "DOCUMENTOS_ANEXOS",
+      "termo": "arquivo",
+      "peso": 7,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'arquivo' (DOCUMENTOS_ANEXOS)"
+    },
+    {
+      "categoria": "DOCUMENTOS_ANEXOS",
+      "termo": "documento ilegível",
+      "peso": 10,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'documento ilegível' (DOCUMENTOS_ANEXOS)"
+    },
+    {
+      "categoria": "DOCUMENTOS_ANEXOS",
+      "termo": "erro ao anexar",
+      "peso": 9,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'erro ao anexar' (DOCUMENTOS_ANEXOS)"
+    },
+    {
+      "categoria": "DOCUMENTOS_ANEXOS",
+      "termo": "upload",
+      "peso": 7,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'upload' (DOCUMENTOS_ANEXOS)"
+    },
+    {
+      "categoria": "DADOS_CADASTRAIS",
+      "termo": "cadastro",
+      "peso": 8,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'cadastro' (DADOS_CADASTRAIS)"
+    },
+    {
+      "categoria": "DADOS_CADASTRAIS",
+      "termo": "dados cadastrais",
+      "peso": 10,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'dados cadastrais' (DADOS_CADASTRAIS)"
+    },
+    {
+      "categoria": "DADOS_CADASTRAIS",
+      "termo": "atualização cadastral",
+      "peso": 10,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'atualização cadastral' (DADOS_CADASTRAIS)"
+    },
+    {
+      "categoria": "DADOS_CADASTRAIS",
+      "termo": "endereço",
+      "peso": 8,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'endereço' (DADOS_CADASTRAIS)"
+    },
+    {
+      "categoria": "DADOS_CADASTRAIS",
+      "termo": "telefone",
+      "peso": 7,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'telefone' (DADOS_CADASTRAIS)"
+    },
+    {
+      "categoria": "DADOS_CADASTRAIS",
+      "termo": "email",
+      "peso": 7,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'email' (DADOS_CADASTRAIS)"
+    },
+    {
+      "categoria": "DADOS_CADASTRAIS",
+      "termo": "cpf",
+      "peso": 7,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'cpf' (DADOS_CADASTRAIS)"
+    },
+    {
+      "categoria": "DADOS_CADASTRAIS",
+      "termo": "cnpj",
+      "peso": 7,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'cnpj' (DADOS_CADASTRAIS)"
+    },
+    {
+      "categoria": "RENEGOCIACAO_DIVIDA",
+      "termo": "dívida",
+      "peso": 10,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'dívida' (RENEGOCIACAO_DIVIDA)"
+    },
+    {
+      "categoria": "RENEGOCIACAO_DIVIDA",
+      "termo": "renegociação",
+      "peso": 10,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'renegociação' (RENEGOCIACAO_DIVIDA)"
+    },
+    {
+      "categoria": "RENEGOCIACAO_DIVIDA",
+      "termo": "acordo",
+      "peso": 8,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'acordo' (RENEGOCIACAO_DIVIDA)"
+    },
+    {
+      "categoria": "RENEGOCIACAO_DIVIDA",
+      "termo": "atraso",
+      "peso": 7,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'atraso' (RENEGOCIACAO_DIVIDA)"
+    },
+    {
+      "categoria": "RENEGOCIACAO_DIVIDA",
+      "termo": "nome negativado",
+      "peso": 10,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'nome negativado' (RENEGOCIACAO_DIVIDA)"
+    },
+    {
+      "categoria": "RENEGOCIACAO_DIVIDA",
+      "termo": "negativação",
+      "peso": 10,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'negativação' (RENEGOCIACAO_DIVIDA)"
+    },
+    {
+      "categoria": "RENEGOCIACAO_DIVIDA",
+      "termo": "serasa",
+      "peso": 8,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'serasa' (RENEGOCIACAO_DIVIDA)"
+    },
+    {
+      "categoria": "RENEGOCIACAO_DIVIDA",
+      "termo": "spc",
+      "peso": 8,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'spc' (RENEGOCIACAO_DIVIDA)"
+    },
+    {
+      "categoria": "CONSORCIO",
+      "termo": "consórcio",
+      "peso": 10,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'consórcio' (CONSORCIO)"
+    },
+    {
+      "categoria": "CONSORCIO",
+      "termo": "carta de crédito",
+      "peso": 10,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'carta de crédito' (CONSORCIO)"
+    },
+    {
+      "categoria": "CONSORCIO",
+      "termo": "assembleia",
+      "peso": 8,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'assembleia' (CONSORCIO)"
+    },
+    {
+      "categoria": "CONSORCIO",
+      "termo": "contemplação",
+      "peso": 9,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'contemplação' (CONSORCIO)"
+    },
+    {
+      "categoria": "CONSORCIO",
+      "termo": "cota",
+      "peso": 7,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'cota' (CONSORCIO)"
+    },
+    {
+      "categoria": "CONSORCIO",
+      "termo": "lance",
+      "peso": 7,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'lance' (CONSORCIO)"
+    },
+    {
+      "categoria": "OUVIDORIA_RECLAMACAO_REGULATORIA",
+      "termo": "banco central",
+      "peso": 12,
+      "tipo": "FRASE",
+      "criticidade": "ALTA",
+      "justificativa": "match frase 'banco central' (OUVIDORIA_RECLAMACAO_REGULATORIA)"
+    },
+    {
+      "categoria": "OUVIDORIA_RECLAMACAO_REGULATORIA",
+      "termo": "bacen",
+      "peso": 12,
+      "tipo": "PALAVRA",
+      "criticidade": "ALTA",
+      "justificativa": "match palavra 'bacen' (OUVIDORIA_RECLAMACAO_REGULATORIA)"
+    },
+    {
+      "categoria": "OUVIDORIA_RECLAMACAO_REGULATORIA",
+      "termo": "procon",
+      "peso": 11,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'procon' (OUVIDORIA_RECLAMACAO_REGULATORIA)"
+    },
+    {
+      "categoria": "OUVIDORIA_RECLAMACAO_REGULATORIA",
+      "termo": "reclame aqui",
+      "peso": 11,
+      "tipo": "FRASE",
+      "criticidade": "MEDIA",
+      "justificativa": "match frase 'reclame aqui' (OUVIDORIA_RECLAMACAO_REGULATORIA)"
+    },
+    {
+      "categoria": "OUVIDORIA_RECLAMACAO_REGULATORIA",
+      "termo": "ação judicial",
+      "peso": 10,
+      "tipo": "FRASE",
+      "criticidade": "ALTA",
+      "justificativa": "match frase 'ação judicial' (OUVIDORIA_RECLAMACAO_REGULATORIA)"
+    },
+    {
+      "categoria": "OUVIDORIA_RECLAMACAO_REGULATORIA",
+      "termo": "denúncia",
+      "peso": 9,
+      "tipo": "PALAVRA",
+      "criticidade": "MEDIA",
+      "justificativa": "match palavra 'denúncia' (OUVIDORIA_RECLAMACAO_REGULATORIA)"
+    }
+  ],
+  "compostas": [
+    {
+      "categoria": "FRAUDE",
+      "termosObrigatorios": [
+        "nao reconheco",
+        "cartao"
+      ],
+      "pesoExtra": 10,
+      "justificativa": "composta nao reconheco + cartao"
+    },
+    {
+      "categoria": "FRAUDE",
+      "termosObrigatorios": [
+        "compra",
+        "nao reconhecida"
+      ],
+      "pesoExtra": 10,
+      "justificativa": "composta compra nao reconhecida"
+    },
+    {
+      "categoria": "FRAUDE",
+      "termosObrigatorios": [
+        "pix",
+        "nao autorizado"
+      ],
+      "pesoExtra": 12,
+      "justificativa": "composta pix nao autorizado"
+    },
+    {
+      "categoria": "FRAUDE",
+      "termosObrigatorios": [
+        "pix",
+        "golpe"
+      ],
+      "pesoExtra": 12,
+      "justificativa": "composta pix golpe"
+    },
+    {
+      "categoria": "ACESSO_CONTA",
+      "termosObrigatorios": [
+        "aplicativo",
+        "nao consigo entrar"
+      ],
+      "pesoExtra": 8,
+      "justificativa": "composta aplicativo + nao consigo entrar"
+    },
+    {
+      "categoria": "APLICATIVO",
+      "termosObrigatorios": [
+        "aplicativo",
+        "travando"
+      ],
+      "pesoExtra": 8,
+      "justificativa": "composta aplicativo travando"
+    },
+    {
+      "categoria": "COBRANCA",
+      "termosObrigatorios": [
+        "fatura",
+        "cobranca indevida"
+      ],
+      "pesoExtra": 10,
+      "justificativa": "composta fatura cobranca indevida"
+    },
+    {
+      "categoria": "IMOBILIARIO",
+      "termosObrigatorios": [
+        "financiamento",
+        "imovel"
+      ],
+      "pesoExtra": 10,
+      "justificativa": "composta financiamento imovel"
+    },
+    {
+      "categoria": "IMOBILIARIO",
+      "termosObrigatorios": [
+        "fgts",
+        "financiamento"
+      ],
+      "pesoExtra": 8,
+      "justificativa": "composta fgts financiamento"
+    },
+    {
+      "categoria": "OUVIDORIA_RECLAMACAO_REGULATORIA",
+      "termosObrigatorios": [
+        "banco central",
+        "protocolo"
+      ],
+      "pesoExtra": 10,
+      "justificativa": "composta bacen protocolo"
+    }
+  ]
+}

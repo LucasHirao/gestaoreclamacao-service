@@ -1,0 +1,17 @@
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  cloud:
+    aws:
+      endpoint: ${AWS_ENDPOINT_URL:http://localhost.localstack.cloud:4566}
+      credentials:
+        access-key: test
+        secret-key: test
+      sqs:
+        queue-not-found-strategy: CREATE
+
+app:
+  observability:
+    log-json: true

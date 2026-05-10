@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:reclamacoes;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  flyway:
+    enabled: false
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+
+app:
+  classification:
+    regras: classpath:classificacao/regras-classificacao.json
+    sinonimos: classpath:classificacao/sinonimos-classificacao.json
+  sla:
+    parametros: classpath:parametros/sla-parametros.json

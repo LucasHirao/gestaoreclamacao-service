@@ -1,0 +1,40 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/reclamacoes
+    username: reclamacoes
+    password: reclamacoes
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  cloud:
+    aws:
+      endpoint: ${AWS_ENDPOINT_URL:http://localhost.localstack.cloud:4566}
+      credentials:
+        access-key: test
+        secret-key: test
+      sqs:
+        queue-not-found-strategy: CREATE
+        listener:
+          poll-timeout: 5s
+
+management:
+  endpoint:
+    health:
+      show-details: always
+
+app:
+  observability:
+    log-json: true
+
+aws:
+  sqs:
+    standardized-request-queue: solicitacao-padronizada
+
+logging:
+  level:
+    com.banco.reclamacoes: DEBUG
+
+springdoc:
+  swagger-ui:
+    enabled: true

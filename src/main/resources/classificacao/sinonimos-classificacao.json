@@ -1,0 +1,12 @@
+{
+  "cartao": ["cartão", "cartao", "card", "cartão de crédito", "cartao de credito"],
+  "cobranca": ["cobrança", "cobranca", "valor cobrado", "tarifa", "débito indevido", "debito indevido"],
+  "fraude": ["fraude", "golpe", "não reconheço", "nao reconheco", "compra não reconhecida", "compra nao reconhecida", "transação não autorizada", "transacao nao autorizada"],
+  "aplicativo": ["app", "aplicativo", "mobile", "internet banking"],
+  "acesso": ["acesso", "login", "entrar", "logar", "autenticação", "autenticacao"],
+  "pix": ["pix", "chave pix", "qr code", "copia e cola"],
+  "imobiliario": ["imobiliário", "imobiliario", "crédito imobiliário", "credito imobiliario", "financiamento imobiliário", "financiamento imobiliario", "imóvel", "imovel"],
+  "seguro": ["seguro", "seguros", "apólice", "apolice", "sinistro", "prestamista"],
+  "investimento": ["investimento", "aplicação", "aplicacao", "cdb", "fundo", "tesouro direto", "poupança", "poupanca"],
+  "atendimento": ["atendimento", "atendente", "gerente", "sac", "ouvidoria", "agência", "agencia"]
+}
