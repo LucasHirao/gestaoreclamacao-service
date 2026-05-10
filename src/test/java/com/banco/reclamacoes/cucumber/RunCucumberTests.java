@@ -9,7 +9,10 @@ import java.util.List;
  * Ponto de entrada para executar cenários Cucumber pela CLI (equivale ao {@link Main} usado pelo Maven na fase {@code bdd}).
  *
  * <p>Requer infraestrutura do perfil {@code bdd} (PostgreSQL e LocalStack), por exemplo {@code docker compose up -d postgres
- * localstack} na raiz do projeto.
+ * localstack} na raiz do projeto. Só Postgres não basta: sem LocalStack na porta 4566, o AWS SDK falha (ex.: {@code localhost.localstack.cloud:4566 Connection refused} em
+ * {@link com.banco.reclamacoes.bdd.BddFronteirasSanidade}).
+ *
+ * <p>Rodando pelo IntelliJ (botão Run em {@code main}): o IDE não executa o Maven que sobe os contêineres — suba {@code postgres} e {@code localstack} no Compose antes.
  *
  * <h2>Todas as features em {@code classpath:features}</h2>
  *

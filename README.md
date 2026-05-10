@@ -18,6 +18,15 @@ mvn test-compile exec:java@jmh-main   # benchmarks JMH (Classificador…)
 
 O perfil Spring `bdd` (Cucumber) usa **PostgreSQL** local (Flyway + JPA validate), **SQS** (`integracao-reclamacoes`) e ainda faz *smoke* de **SNS** e **DynamoDB** no LocalStack na subida da aplicação de teste.
 
+**IntelliJ / `RunCucumberTests`:** o Maven não sobe o Docker para você. Na raiz do projeto use **os dois serviços** (BDD não funciona só com Postgres):
+
+```bash
+docker compose up -d postgres localstack
+```
+
+- **`Connection to localhost:5432 refused`** → Postgres do Compose não está a correr (ou a porta está ocupada).
+- **`Connect to localhost.localstack.cloud:4566 … Connection refused`** (stack em `BddFronteirasSanidade` / DynamoDB) → LocalStack não está a correr ou não está a ouvir na **4566** (`docker compose ps`, `docker compose logs localstack`). Só ter `postgres` ativo não chega.
+
 ## Conventional Commits
 
 Use mensagens curtas no formato `<tipo>(escopo opcional)!: descrição`, por exemplo `feat(classificação): aumenta cobertura de sinônimos`. Commits devem permanecer pequenos e coesos (o histórico Git local depende da sua política de equipe).

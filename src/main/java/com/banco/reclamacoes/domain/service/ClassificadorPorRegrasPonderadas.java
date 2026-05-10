@@ -8,6 +8,7 @@ import com.banco.reclamacoes.domain.valueobject.DescricaoReclamacao;
 import com.banco.reclamacoes.domain.valueobject.ResultadoClassificacao;
 import com.banco.reclamacoes.domain.valueobject.ScoreClassificacao;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -17,7 +18,8 @@ import java.util.Set;
 import java.util.regex.Pattern;
 
 /**
- * Motor de classificação por regras ponderadas (índice invertido, frases, regex e compostas).
+ * Motor de classificação por regras ponderadas (índice invertido por token, literais/frases por Aho–Corasick, regex e
+ * compostas).
  *
  * <p>Instanciado via {@link #montar} com dados já materializados — sem dependência de
  * infraestrutura ou frameworks.</p>
@@ -25,19 +27,19 @@ import java.util.regex.Pattern;
 public final class ClassificadorPorRegrasPonderadas {
 
     private final Map<String, List<RegraClassificacaoDefinicao>> indicePorTermo;
-    private final List<RegraClassificacaoDefinicao> regrasFrase;
+    private final AutomatoFrasesAhoCorasick automatoFrases;
     private final List<RegraRegexCompilada> regrasRegex;
     private final List<RegraCompostaDefinicao> regrasCompostas;
     private final Map<String, String> sinonimos;
 
     private ClassificadorPorRegrasPonderadas(
             final Map<String, List<RegraClassificacaoDefinicao>> indicePorTermo,
-            final List<RegraClassificacaoDefinicao> regrasFrase,
+            final AutomatoFrasesAhoCorasick automatoFrases,
             final List<RegraRegexCompilada> regrasRegex,
             final List<RegraCompostaDefinicao> regrasCompostas,
             final Map<String, String> sinonimos) {
         this.indicePorTermo = indicePorTermo;
-        this.regrasFrase = regrasFrase;
+        this.automatoFrases = automatoFrases;
         this.regrasRegex = regrasRegex;
         this.regrasCompostas = regrasCompostas;
         this.sinonimos = sinonimos;
@@ -68,9 +70,10 @@ public final class ClassificadorPorRegrasPonderadas {
                 case COMPOSTA -> {}
             }
         }
+        final var frasesCopiadas = List.copyOf(frases);
         return new ClassificadorPorRegrasPonderadas(
                 Map.copyOf(indice),
-                List.copyOf(frases),
+                AutomatoFrasesAhoCorasick.construir(frasesCopiadas),
                 List.copyOf(regex),
                 List.copyOf(regrasCompostas),
                 Map.copyOf(sinonimosVariantesParaCanonico));
@@ -90,13 +93,12 @@ public final class ClassificadorPorRegrasPonderadas {
         }
 
         final var frasesAplicadas = new HashSet<String>();
-        for (final var regra : regrasFrase) {
-            final var chave = chaveFrase(regra);
-            if (!texto.contains(regra.termoNormalizado()) || !frasesAplicadas.add(chave)) {
-                continue;
+        automatoFrases.encontrarLitereais(texto, regra -> {
+            if (!frasesAplicadas.add(chaveFrase(regra))) {
+                return;
             }
             acumulacao.contribuir(regra.categoria(), regra.peso(), regra.justificativa());
-        }
+        });
 
         for (final var regra : regrasRegex) {
             if (regra.pattern().matcher(texto).find()) {
@@ -112,7 +114,7 @@ public final class ClassificadorPorRegrasPonderadas {
             if (!compostasAplicadas.add(chave)) {
                 continue;
             }
-            if (NormalizacaoTextual.contemTodosTermos(texto, composta.termosObrigatoriosNormalizados())) {
+            if (contemTodosTermosPreferindoPrimeiroMaisLongo(texto, composta.termosObrigatoriosNormalizados())) {
                 acumulacao.contribuir(composta.categoria(), composta.pesoExtra(), composta.justificativa());
             }
         }
@@ -142,5 +144,17 @@ public final class ClassificadorPorRegrasPonderadas {
 
     private static String chaveFrase(final RegraClassificacaoDefinicao regra) {
         return regra.categoria().name() + "|" + regra.tipo().name() + "|" + regra.termoNormalizado();
+    }
+
+    /** {@code contains} repetido pelos mais longos primeiro reduz trabalho médio quando um termo longo falha antes. */
+    private static boolean contemTodosTermosPreferindoPrimeiroMaisLongo(
+            final String textoNormalizado, final List<String> termosObrigatoriosNormalizados) {
+        final int n = termosObrigatoriosNormalizados.size();
+        if (n <= 1) {
+            return NormalizacaoTextual.contemTodosTermos(textoNormalizado, termosObrigatoriosNormalizados);
+        }
+        final var copia = new ArrayList<>(termosObrigatoriosNormalizados);
+        copia.sort(Comparator.comparingInt(String::length).reversed());
+        return NormalizacaoTextual.contemTodosTermos(textoNormalizado, copia);
     }
 }

@@ -4,6 +4,12 @@ Funcionalidade: Processamento de solicitação padronizada
   Quero processar solicitações padronizadas
   Para criar reclamações oficiais com classificação e SLA
 
+  Cenário: Classificar reclamação com indício de fraude
+    Dado uma solicitação com texto "não reconheço uma compra no meu cartão"
+    Quando a solicitação for processada
+    Então a categoria principal deve ser FRAUDE
+    E a justificativa deve conter regra relacionada a compra não reconhecida
+
   Cenário: Criar reclamação oficial a partir de solicitação padronizada válida
     Dado que existe uma solicitação padronizada válida
     Quando a solicitação for processada
@@ -16,12 +22,6 @@ Funcionalidade: Processamento de solicitação padronizada
     Dado que uma solicitação padronizada já foi processada
     Quando a mesma solicitação for processada novamente
     Então nenhuma nova reclamação deve ser criada
-
-  Cenário: Classificar reclamação com indício de fraude
-    Dado uma solicitação com texto "não reconheço uma compra no meu cartão"
-    Quando a solicitação for processada
-    Então a categoria principal deve ser FRAUDE
-    E a justificativa deve conter regra relacionada a compra não reconhecida
 
   Cenário: Classificação ambígua exige revisão
     Dado uma solicitação com texto ambíguo entre cobrança e cartão

@@ -39,4 +39,25 @@ class ClassificadorPorRegrasPonderadasTest {
                     "Este relato é longo o suficiente: preciso de suporte sobre nfe 2024 no aplicativo."));
         assertThat(resultado.justificativas()).anyMatch(j -> j.contains("regex nfe"));
     }
+
+    @Test
+    void fraseLiteralCasaSubsequenciaSemAlinharComToken() {
+        final var dados =
+            RegraClassificacaoDefinicaoDados.builder()
+                .categoria(CategoriaReclamacao.OUTROS)
+                .termoNormalizado("compra")
+                .peso(30)
+                .tipo(TipoTermoClassificacao.FRASE)
+                .criticidade(CriticidadeRegra.MEDIA)
+                .justificativa("subsequencia compra em supercompra")
+                .build();
+        final var regra = RegraClassificacaoDefinicao.criar(dados);
+
+        final var classificador =
+            ClassificadorPorRegrasPonderadas.montar(List.of(regra), List.of(), Map.of());
+
+        final var resultado =
+            classificador.classificar(DescricaoReclamacao.de("Contestação sobre supercompra no extrato."));
+        assertThat(resultado.justificativas()).anyMatch(j -> j.contains("supercompra"));
+    }
 }
