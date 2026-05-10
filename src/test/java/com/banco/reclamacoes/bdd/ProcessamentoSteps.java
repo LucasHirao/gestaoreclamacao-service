@@ -27,7 +27,6 @@ import com.banco.reclamacoes.domain.valueobject.ReclamacaoId;
 import com.banco.reclamacoes.domain.valueobject.ResultadoClassificacao;
 import com.banco.reclamacoes.domain.valueobject.Sla;
 import com.banco.reclamacoes.domain.valueobject.SolicitacaoId;
-import org.springframework.stereotype.Component;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -39,7 +38,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-@Component
 public class ProcessamentoSteps {
 
     private final ReclamacaoRepositoryPort repositorio;

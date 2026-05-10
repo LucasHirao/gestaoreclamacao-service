@@ -1,0 +1,2 @@
+# Scripts montados em contêineres Linux (CRLF quebra shebang/init no Docker)
+*.sh text eol=lf

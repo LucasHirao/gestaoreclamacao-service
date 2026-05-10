@@ -10,6 +10,9 @@ Requer **Docker** e **Compose v2** com suporte a `docker compose up --wait` (o `
 mvn verify                         # Surefire (unitários) → Docker (Postgres + LocalStack: SQS, SNS, DynamoDB) → Cucumber/BDD → JaCoCo (relatório + gate ≥90%) → PIT (mutação ≥90% no escopo do pom)
 mvn verify -DskipIntegrationInfra=true   # apenas unitários + JaCoCo + PIT (sem Docker nem BDD)
 mvn test-compile exec:java@bdd     # apenas Cucumber manual (com Docker já rodando ou com infra ignorada através de properties)
+mvn test-compile exec:java@run-cucumber   # mesmo fluxo Cucumber via `RunCucumberTests` (entrypoint Java)
+mvn test-compile exec:java@run-cucumber -Dexec.args="classpath:features/processamento.feature"              # só essa feature
+mvn test-compile exec:java@run-cucumber -Dexec.args="classpath:features/processamento.feature --name ^Emitir.alert"    # um cenário (regex no nome do cenário)
 mvn test-compile exec:java@jmh-main   # benchmarks JMH (Classificador…)
 ```
 

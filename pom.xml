@@ -274,6 +274,9 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
                     <excludedGroups>benchmark</excludedGroups>
+                    <excludes>
+                        <exclude>**/cucumber/RunCucumberTests.java</exclude>
+                    </excludes>
                 </configuration>
             </plugin>
 
@@ -323,6 +326,15 @@
                                 <argument>summary</argument>
                                 <argument>classpath:features</argument>
                             </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>run-cucumber</id>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>com.banco.reclamacoes.cucumber.RunCucumberTests</mainClass>
                         </configuration>
                     </execution>
                     <execution>
