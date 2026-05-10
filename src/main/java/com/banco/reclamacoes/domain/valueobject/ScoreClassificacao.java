@@ -7,14 +7,14 @@ public final class ScoreClassificacao {
 
     private final int pontos;
 
-    private ScoreClassificacao( int pontos) {
+    private ScoreClassificacao(final int pontos) {
         if (pontos < 0) {
             throw new ViolacaoDominioException("score de classificação não pode ser negativo");
         }
         this.pontos = pontos;
     }
 
-    public static ScoreClassificacao de( int pontos) {
+    public static ScoreClassificacao de(final int pontos) {
         return new ScoreClassificacao(pontos);
     }
 
@@ -22,7 +22,7 @@ public final class ScoreClassificacao {
         return pontos;
     }
 
-    public ScoreClassificacao somar( int delta) {
+    public ScoreClassificacao somar(final int delta) {
         return new ScoreClassificacao(this.pontos + delta);
     }
 

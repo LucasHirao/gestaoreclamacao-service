@@ -27,9 +27,11 @@ public interface ReclamacaoRepositoryPort {
     List<Reclamacao> buscar(
         final ClienteId clienteId,
         final StatusReclamacao status,
-        final CategoriaReclamacao categoria, int pagina, int tamanho);
+        final CategoriaReclamacao categoria,
+        final int pagina,
+        final int tamanho);
 
-    List<Reclamacao> buscarReclamacoesComAlertaPendente(final Instant momento, int limite);
+    List<Reclamacao> buscarReclamacoesComAlertaPendente(final Instant momento, final int limite);
 
-    List<Reclamacao> buscarProximasAoVencimento(final Instant ateDeadline, int limite);
+    List<Reclamacao> buscarProximasAoVencimento(final Instant ateDeadline, final int limite);
 }

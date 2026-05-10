@@ -9,7 +9,10 @@ public final class ParametrosSla {
     private final int diasAntesParaAlerta;
     private final int limiteBuscaAlertas;
 
-    private ParametrosSla( int prazoPadraoDiasCorridos, int diasAntesParaAlerta, int limiteBuscaAlertas) {
+    private ParametrosSla(
+        final int prazoPadraoDiasCorridos,
+        final int diasAntesParaAlerta,
+        final int limiteBuscaAlertas) {
         if (prazoPadraoDiasCorridos <= 0) {
             throw new ViolacaoDominioException("prazo padrão de SLA deve ser positivo");
         }
@@ -24,7 +27,10 @@ public final class ParametrosSla {
         this.limiteBuscaAlertas = limiteBuscaAlertas;
     }
 
-    public static ParametrosSla of( int prazoPadraoDiasCorridos, int diasAntesParaAlerta, int limiteBuscaAlertas) {
+    public static ParametrosSla of(
+        final int prazoPadraoDiasCorridos,
+        final int diasAntesParaAlerta,
+        final int limiteBuscaAlertas) {
         return new ParametrosSla(prazoPadraoDiasCorridos, diasAntesParaAlerta, limiteBuscaAlertas);
     }
 

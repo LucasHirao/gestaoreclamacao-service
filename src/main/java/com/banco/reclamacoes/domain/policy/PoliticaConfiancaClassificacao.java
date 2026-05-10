@@ -95,7 +95,8 @@ public final class PoliticaConfiancaClassificacao {
         return lista;
     }
 
-    private static ConfiancaClassificacao avaliarFaixa( int scorePrincipal, int diferenca, boolean empateCritico) {
+    private static ConfiancaClassificacao avaliarFaixa(
+        final int scorePrincipal, final int diferenca, final boolean empateCritico) {
         if (empateCritico) {
             return ConfiancaClassificacao.BAIXA;
         }
@@ -109,7 +110,7 @@ public final class PoliticaConfiancaClassificacao {
     }
 
     private static boolean maisDeUmaCriticaNoEmpate(
-            final List<CategoriaPontuacao> ranking, int scoreTopo) {
+            final List<CategoriaPontuacao> ranking, final int scoreTopo) {
         final var empatadas = ranking.stream()
             .filter(c -> c.score().pontos() == scoreTopo)
             .map(CategoriaPontuacao::categoria)

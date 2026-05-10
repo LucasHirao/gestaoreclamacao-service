@@ -1,9 +1,9 @@
 package com.banco.reclamacoes.application.classification;
 
-import com.banco.reclamacoes.domain.port.MotorClassificacaoPort;
 import com.banco.reclamacoes.application.port.output.RegrasClassificacaoPort;
 import com.banco.reclamacoes.application.port.output.RegrasCompostasPort;
 import com.banco.reclamacoes.application.port.output.SinonimosClassificacaoPort;
+import com.banco.reclamacoes.domain.port.MotorClassificacaoPort;
 import com.banco.reclamacoes.domain.service.ClassificadorPorRegrasPonderadas;
 import com.banco.reclamacoes.domain.valueobject.DescricaoReclamacao;
 import com.banco.reclamacoes.domain.valueobject.ResultadoClassificacao;

@@ -85,7 +85,7 @@ public class Reclamacao {
     public static Reclamacao restaurarPersistida(final ReclamacaoPersistenciaSnapshot snapshot) {
         Objects.requireNonNull(snapshot);
         final var reclamacao =
-            new Reclamacao( snapshot.id(), snapshot.solicitacaoId(), snapshot.protocolo(), snapshot.clienteId(), snapshot.canalOrigem(), snapshot.descricao(), snapshot.dataRecebimento(), snapshot.correlationId(), snapshot.idempotencyKey(), snapshot.anexos());
+            new Reclamacao(snapshot.id(), snapshot.solicitacaoId(), snapshot.protocolo(), snapshot.clienteId(), snapshot.canalOrigem(), snapshot.descricao(), snapshot.dataRecebimento(), snapshot.correlationId(), snapshot.idempotencyKey(), snapshot.anexos());
         reclamacao.status = snapshot.status();
         reclamacao.classificacao = snapshot.classificacao();
         reclamacao.resultadoClassificacao = snapshot.resultadoClassificacao();
@@ -122,10 +122,10 @@ public class Reclamacao {
         final var id = provedorIdentidade.novaIdentidade();
         final var protocolo = geradorProtocolo.gerarParaDataRecebimento(dados.dataRecebimento());
         final var reclamacao =
-            new Reclamacao( id, dados.solicitacaoId(), protocolo, dados.clienteId(), dados.canalOrigem(), dados.descricao(), dados.dataRecebimento(), dados.correlationId(), dados.idempotencyKey(), dados.anexos());
+            new Reclamacao(id, dados.solicitacaoId(), protocolo, dados.clienteId(), dados.canalOrigem(), dados.descricao(), dados.dataRecebimento(), dados.correlationId(), dados.idempotencyKey(), dados.anexos());
         reclamacao.registrarHistorico("CRIACAO", "Reclamação oficial instanciada", agora);
         reclamacao.eventosDominio.add(
-            new ReclamacaoCriada( id, dados.solicitacaoId(), dados.clienteId(), protocolo, dados.correlationId(), agora));
+            new ReclamacaoCriada(id, dados.solicitacaoId(), dados.clienteId(), protocolo, dados.correlationId(), agora));
 
         reclamacao.classificar(resultadoClassificacao, relogioDomain);
         reclamacao.definirSla(calculoSla.calcular(dados.dataRecebimento(), parametrosSla), relogioDomain);
